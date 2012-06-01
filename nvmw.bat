@@ -53,7 +53,7 @@ set NPM_VERSION=1.1.9
 set NPM_URL=http://npmjs.org/dist/npm-%NPM_VERSION%.zip
 echo Start installing Node %NODE_VERSION%
 
-set "NODE_HOME=%NVMW_HOME%%NODE_VERSION%"
+set "NODE_HOME=%NVMW_HOME%\%NODE_VERSION%"
 mkdir "%NODE_HOME%"
 set "NODE_EXE_FILE=%NODE_HOME%\node.exe"
 set "NPM_ZIP_FILE=%NODE_HOME%\npm.zip"
@@ -124,7 +124,7 @@ if not exist "%NODE_HOME%" (
 :use
 setlocal
 set NODE_VERSION=%1
-set "NODE_HOME=%NVMW_HOME%%NODE_VERSION%"
+set "NODE_HOME=%NVMW_HOME%\%NODE_VERSION%"
 
 if not exist "%NODE_HOME%" (
   echo Node %NODE_VERSION% is not installed
